@@ -1,0 +1,80 @@
+.addbtn a {
+  text-decoration: none;
+  font-size: 21px;
+}
+.addbtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20rem;
+  padding: 0 20%;
+  text-align: center;
+  @media only screen and (max-width: 768px) {
+    margin-top: 15rem;
+    padding: 0 5%;
+  }
+}
+
+.addtocartorder {
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.addtocartorder div {
+  font: inherit;
+  cursor: pointer;
+  background-color: #8a2b06;
+  border: 1px solid #8a2b06;
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+.addtocartorder a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.orderplaced {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.orderplaced h2 {
+  text-align: center;
+}
+.orderplacement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media only screen and (max-width: 768px) {
+    display: block;
+  }
+}
+.imgsection {
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+.imgsection img {
+  margin-top: -7rem;
+  margin-left: 5rem;
+}
+.textsection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5rem;
+  @media only screen and (max-width: 768px) {
+    margin-right: 0;
+  }
+}
+.textsection h2 {
+  margin-bottom: 0;
+}

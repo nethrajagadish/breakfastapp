@@ -1,0 +1,30 @@
+.food {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  padding-bottom: 1rem;
+}
+
+.food h3 {
+  margin: 1rem 0 0.25rem 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.description {
+  margin-top: 0.75rem;
+  font-style: italic;
+  text-align: center;
+}
+.qtyForm {
+  width: 85%;
+}
+
+.price {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #ad5502;
+  font-size: 1.25rem;
+  text-align: center;
+}

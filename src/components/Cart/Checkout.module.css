@@ -1,0 +1,125 @@
+.form {
+  padding: 0 10%;
+}
+.headline {
+  padding: 0 18%;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+  color: white;
+  @media only screen and (max-width: 768px) {
+    padding: 0 10%;
+    font-size: 21px;
+    margin-bottom: 2rem;
+  }
+}
+.control {
+  margin-bottom: 0.75rem;
+}
+
+.control label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-size: 21px;
+  color: white;
+  @media only screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.control input {
+  font: inherit;
+  border: 1px solid #5a1a01;
+  border-radius: 4px;
+  width: 50rem;
+  max-width: 100%;
+  min-height: 50px;
+  outline: none;
+  @media only screen and (max-width: 768px) {
+    min-height: 35px;
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  width: 50rem;
+  margin-top: 2rem;
+  @media only screen and (max-width: 768px) {
+    display: block;
+    width: auto;
+    margin-bottom: 2rem;
+  }
+}
+
+.actions button {
+  font: inherit;
+  color: #5a1a01;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 30px;
+  padding: 0.75rem 10rem;
+  font-weight: bold;
+  @media only screen and (max-width: 768px) {
+    padding: 0.75rem 7rem;
+  }
+}
+.actions a {
+  font: inherit;
+  color: #5a1a01;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #8a2b06;
+  border-radius: 30px;
+  padding: 0.75rem 10rem;
+  text-decoration: none;
+  font-weight: bold;
+  @media only screen and (max-width: 768px) {
+    padding: 0.75rem 7.25rem;
+  }
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #ffe6dc;
+}
+
+.actions .submit {
+  border: 1px solid #5a1a01;
+  background-color: #5a1a01;
+  color: white;
+  font-weight: bold;
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 2rem;
+  }
+}
+
+.actions .submit:hover,
+.actions .submit:active {
+  background-color: #7a2706;
+}
+
+.invalid label {
+  color: #ca3e51;
+}
+
+.invalid input {
+  border-color: #aa0b20;
+  background-color: #ffeff1;
+}
+.formsection {
+  display: flex;
+  justify-content: center;
+  @media only screen and (max-width: 768px) {
+    display: block;
+  }
+}
+.formsection img {
+  width: 415px;
+}
+.orderimg {
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}

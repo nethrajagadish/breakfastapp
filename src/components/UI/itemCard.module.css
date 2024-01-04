@@ -1,0 +1,16 @@
+.itemCard {
+  padding: 1rem;
+  width: 420px;
+  margin: 24px;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  background-color: #383838;
+  color: white;
+  @media only screen and (max-width: 768px) {
+    padding: 0;
+  }
+}
+.itemCard:hover {
+  transform: scale(1.05) rotateX(10deg);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
