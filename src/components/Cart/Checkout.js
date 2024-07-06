@@ -5,49 +5,33 @@ import orderimage from "../../assets/orderimage.png";
 
 const isEmpty = (enteredValue) => enteredValue.trim() === "";
 
-const isSixChars = (enteredValue) => enteredValue.trim().length === 6;
-
 const Checkout = (props) => {
   const [formValidity, setFormValidity] = useState({
     name: true,
-    street: true,
-    postalCode: true,
-    city: true,
-    state: true,
+    mobile: true,
+    table: true,
   });
   const nameInputRef = useRef();
-  const streetInputRef = useRef();
-  const postalCodeInputRef = useRef();
-  const cityInputRef = useRef();
-  const stateInputRef = useRef();
+  const mobileInputRef = useRef();
+  const tableInputRef = useRef();
 
   const confirmHandler = (event) => {
     event.preventDefault();
     const nameEntered = nameInputRef.current.value;
-    const streetEntered = streetInputRef.current.value;
-    const postalCodeEntered = postalCodeInputRef.current.value;
-    const cityEntered = cityInputRef.current.value;
-    const stateEntered = stateInputRef.current.value;
+    const mobileEntered = mobileInputRef.current.value;
+    const tableEntered = tableInputRef.current.value;
 
     const nameEnteredValid = !isEmpty(nameEntered);
-    const streetEnteredValid = !isEmpty(streetEntered);
-    const postalCodeEnteredValid = isSixChars(postalCodeEntered);
-    const cityEnteredValid = !isEmpty(cityEntered);
-    const stateEnteredValid = !isEmpty(stateEntered);
+    const mobileEnteredValid = !isEmpty(mobileEntered);
+    const tableEnteredValid = !isEmpty(tableEntered);
 
     setFormValidity({
       name: nameEnteredValid,
-      street: streetEnteredValid,
-      postalCode: postalCodeEnteredValid,
-      city: cityEnteredValid,
-      state: stateEnteredValid,
+      mobile: mobileEnteredValid,
+      table: tableEnteredValid,
     });
     const isFormValid =
-      nameEnteredValid &&
-      streetEnteredValid &&
-      postalCodeEnteredValid &&
-      cityEnteredValid &&
-      stateEnteredValid;
+      nameEnteredValid && mobileEnteredValid && tableEnteredValid;
 
     if (!isFormValid) {
       return;
@@ -55,30 +39,21 @@ const Checkout = (props) => {
 
     props.onConfirm({
       name: nameEntered,
-      street: streetEntered,
-      city: cityEntered,
-      postalCode: postalCodeEntered,
-      state: stateEntered,
+      mobile: mobileEntered,
+      table: tableEntered,
     });
   };
   const nameControlClasses = `${classes.control} ${
     formValidity.name ? "" : classes.invalid
   }`;
-  const streetControlClasses = `${classes.control} ${
-    formValidity.street ? "" : classes.invalid
+  const mobileControlClasses = `${classes.control} ${
+    formValidity.mobile ? "" : classes.invalid
   }`;
-  const cityControlClasses = `${classes.control} ${
-    formValidity.city ? "" : classes.invalid
-  }`;
-  const postalCodeControlClasses = `${classes.control} ${
-    formValidity.postalCode ? "" : classes.invalid
-  }`;
-  const stateControlClasses = `${classes.control} ${
-    formValidity.state ? "" : classes.invalid
+  const tableControlClasses = `${classes.control} ${
+    formValidity.table ? "" : classes.invalid
   }`;
   return (
     <div className={classes.block}>
-      <h1 className={classes.headline}>Delivery Address</h1>
       <div className={classes.formsection}>
         <form className={classes.form} onSubmit={confirmHandler}>
           <div className={nameControlClasses}>
@@ -86,27 +61,21 @@ const Checkout = (props) => {
             <input type="text" id="name" ref={nameInputRef} />
             {!formValidity.name && <p>Please enter a name</p>}
           </div>
-          <div className={streetControlClasses}>
-            <label htmlFor="street">Street</label>
-            <input type="text" id="street" ref={streetInputRef} />
-            {!formValidity.street && <p>Please enter a street</p>}
+          <div className={mobileControlClasses}>
+            <label htmlFor="mobile">Mobile No</label>
+            <input
+              type="text"
+              id="mobile"
+              placeholder="123-456-7890"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              ref={mobileInputRef}
+            />
+            {!formValidity.mobile && <p>Please enter your mobile number</p>}
           </div>
-          <div className={stateControlClasses}>
-            <label htmlFor="state">State</label>
-            <input type="text" id="state" ref={stateInputRef} />
-            {!formValidity.street && <p>Please enter your state</p>}
-          </div>
-          <div className={postalCodeControlClasses}>
-            <label htmlFor="postal">Postal Code</label>
-            <input type="text" id="postal" ref={postalCodeInputRef} />
-            {!formValidity.postalCode && (
-              <p>Please enter a postal code(6 characters)</p>
-            )}
-          </div>
-          <div className={cityControlClasses}>
-            <label htmlFor="city">City</label>
-            <input type="text" id="city" ref={cityInputRef} />
-            {!formValidity.city && <p>Please enter a city</p>}
+          <div className={tableControlClasses}>
+            <label htmlFor="table">Table No</label>
+            <input type="text" id="table" ref={tableInputRef} />
+            {!formValidity.table && <p>Please enter the table number</p>}
           </div>
           <div className={classes.actions}>
             <button className={classes.submit}>Confirm</button>
@@ -114,7 +83,7 @@ const Checkout = (props) => {
           </div>
         </form>
         <div className={classes.orderimg}>
-          <img src={orderimage} />
+          <img src={orderimage} alt="person ordering" />
         </div>
       </div>
     </div>

@@ -39,9 +39,9 @@ const AvailableFoods = () => {
   if (isLoading) {
     return (
       <div className={classes["loading-container"]}>
-        <div class={classes["loading-circle"]}></div>
-        <div class={classes["loading-circle"]}></div>
-        <div class={classes["loading-circle"]}></div>
+        <div className={classes["loading-circle"]}></div>
+        <div className={classes["loading-circle"]}></div>
+        <div className={classes["loading-circle"]}></div>
       </div>
     );
   }

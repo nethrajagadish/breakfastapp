@@ -14,7 +14,6 @@ const FoodItem = (props) => {
       amount: amount,
       price: props.price,
     });
-    console.log(cartCtx);
   };
 
   return (

@@ -56,7 +56,7 @@ const OrderForm = () => {
     <Card>
       <div className={styles.orderplacement}>
         <div className={styles.imgsection}>
-          <img src={orderplaced} width="400"></img>
+          <img src={orderplaced} width="400" alt="thanks"></img>
         </div>
         <div className={styles.textsection}>
           <h2>Your order has been placed</h2>
