@@ -1,4 +1,4 @@
-Description
+Description:
 This project aims to create a user-friendly web application for placing orders in a restaurant. 
 Customers can browse the menu, choose from the menu, and manage their cart and confirm their order from the table.
 
